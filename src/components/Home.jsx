@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../context/UserContext'
 
 export const Home = () => {
+    const {user} = useContext(UserContext)
   return (
-    <div>Home</div>
+    <h1 className='text-center'>Hola {user}</h1>
   )
 }
